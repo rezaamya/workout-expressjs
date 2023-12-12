@@ -3,10 +3,9 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app: Express = express();
+import routers from './routers';
 
-app.get('/', (req: Request, res: Response) => {
-    res.send('Hi');
-});
+app.use('/', routers);
 
 app.listen(process.env.PORT, () => {
     console.info(`Server is running on http://localhost:${process.env.PORT}`)
