@@ -1,3 +1,5 @@
 npm init -y
-npm install typescript express dotenv
-npm install @type/express @type/node
+tsc --init
+
+npm i rimraf typescript express dotenv
+npm i -D @type/express @type/node
